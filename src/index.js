@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import App from './components/App'
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+
+const store = createStore()
 
 ReactDOM.render(
-  <App>Reminder Pro</App>,
+  <Provider store={store}>
+    <App>
+      Reminder Pro
+    </App>
+  </Provider>,
   document.getElementById('root')
 )
